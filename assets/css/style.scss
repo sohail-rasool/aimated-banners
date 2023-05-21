@@ -270,7 +270,6 @@
             .text-img{
                 z-index: 1;
             }
-        
         }
     
         .chracters-block {
@@ -280,6 +279,17 @@
             justify-content: center;
         }
     }
+
+    .top-left-coin {
+        position: absolute;
+        top: -300px;
+        left: 0;
+    }
+    .top-right-coin{
+        position: absolute;
+        top: -300px;
+        right: 0;
+    }
     
     .animation-container {
         width: 200px;
@@ -288,9 +298,9 @@
 
     .front-coin{
         position: absolute;
+        top: 100px;
     }
-
-    .container {
+    .container-item {
         position: relative;
         top: 30px;
         height: 300px;
@@ -414,7 +424,6 @@
         animation: scaling 2.6s infinite;
         border-radius: 100%;
     }
-
     @keyframes bounce {
         20% {
             animation-timing-function: ease-out;
@@ -469,5 +478,6 @@
             transform: rotate(25deg) translateY(400px);
         }
     }
+
 }
 
