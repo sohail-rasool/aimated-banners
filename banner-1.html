@@ -7,41 +7,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <style>
+        #gimmick {
+           display: block;
+           pointer-events: none;
+           position: absolute;
+           top: 0;
+           left: 0;
+       }
+   </style>
 </head>
 
 <body>
     <section>
         <div class="slides-wrapper">
-            <div class="container-block">
+            <div class="container-block rabit-cat-chracters">
                 <div class="foreground ng-star-inserted">
                         <div class="image image-directive animated loaded" style="
                     background-image: url('./assets/images/banner-1/bg-1.png');
                     background-repeat: no-repeat;
                 "></div>
                 </div>
-
-                <div>
-                    <div class="chracters-wrapper">
-                        <div class="coins-block">
-                            <img src="./assets/images/banner-1/coins-2.png" alt="coins-2">
-                            <img src="./assets/images/banner-1/coins-2.png" alt="coins-2">
-                        </div>
-                        <div class="chracters-items">
-                            <img src="./assets/images/banner-1/character-1.png" alt="character-1">
-                            <img src="./assets/images/banner-1/character-2.png" alt="character-1">
-                            <img src="./assets/images/banner-1/character-3.png" alt="character-1">
+                <div class="chracters-wrapper content-wrapper">
+                    <div class="text-wrapper">
+                       
+                        <img class="text-img" src="./assets/images/banner-1/text.png" alt="text">
+                        <div class="front-coin">
+                            <div class="animation-container">
+                                <div class="y-axis-container">
+                                    <div class="container">
+                                        <div class="flash"></div>
+                                        <div class="coin side">
+                                            <div class="shine" style="transform:rotate(-30deg);"></div>
+                                        </div>
+                                        <div class="side-coin"></div>
+                                        <div class="coin">
+                                            <div class="dai">
+                                                <div class="inner-dai">
+                                                    <div class="inner-inner-dai">
+                        
+                                                    </div>
+                                                </div>
+                                                <div class="cutout"></div>
+                                                <div class="dai-shadow"></div>
+                                            </div>
+                                            <div class="shine"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shadow"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="chracters-block">
+                        <div class="chracters-items">
 
-
-
-                <div>
-                    <img class="coins-bag coin move-down" src="./assets/images/banner-1/coins-3.png" />
+                            <img class="rabbit-chracter" src="./assets/images/banner-1/character-1.png" alt="character-1">
+                            <div class="bounce-coins">
+                                <img class="coins-bag move-down" src="./assets/images/banner-1/coins-3.png" />
+                            </div>
+                            <img class="mid-chracter" src="./assets/images/banner-1/character-2.png" alt="character-1">
+                            <img class="cat-chracter" src="./assets/images/banner-1/character-3.png" alt="character-1">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        function gimmick(el) {
+            var exists = document.getElementById('gimmick')
+            if (exists) {
+                exists.parentNode.removeChild(exists);
+                return false;
+            }
+
+            var element = document.querySelector(el);
+            var canvas = document.createElement('canvas'),
+                ctx = canvas.getContext('2d'),
+                focused = false;
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            canvas.id = 'gimmick'
+
+            var coin = new Image();
+            // coin.src = 'http://i.imgur.com/5ZW2MT3.png'
+            coin.src = './assets/images/banner-3/coins-img.png'
+            // 440 wide, 40 high, 10 states
+            coin.onload = function () {
+                element.appendChild(canvas)
+                focused = true;
+                drawloop();
+            }
+            var coins = []
+
+            function drawloop() {
+                if (focused) {
+                    requestAnimationFrame(drawloop);
+                }
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+                if (Math.random() < .3) {
+                    coins.push({
+                        x: Math.random() * canvas.width | 0,
+                        y: -50,
+                        dy: 3,
+                        s: 0.5 + Math.random(),
+                        state: Math.random() * 10 | 0
+                    })
+                }
+                var i = coins.length
+                while (i--) {
+                    var x = coins[i].x
+                    var y = coins[i].y
+                    var s = coins[i].s
+                    var state = coins[i].state
+                    coins[i].state = (state > 9) ? 0 : state + 0.1
+                    coins[i].dy += 0.3
+                    coins[i].y += coins[i].dy
+
+                    ctx.drawImage(coin, 44 * Math.floor(state), 0, 44, 40, x, y, 44 * s, 40 * s)
+
+                    if (y > canvas.height) {
+                        coins.splice(i, 1);
+                    }
+                }
+            }
+
+        }
+        gimmick('.chracters-block')
+    </script>
 </body>
 
 </html>

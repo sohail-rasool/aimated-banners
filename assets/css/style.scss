@@ -5,25 +5,28 @@
     margin: auto;
 }
 
-.banner-jackpot{
+.banner-jackpot {
     width: 1728px;
     height: 658px;
     position: relative;
     margin: auto;
 }
-.slide-car{
+
+.slide-car {
     width: 1728px;
     height: 700px;
     position: relative;
     margin: auto;
 }
-.jackpot-inner{
+
+.jackpot-inner {
     position: relative;
     z-index: 1;
     display: flex;
     justify-content: center;
 }
-.chracter-jackpot{
+
+.chracter-jackpot {
     display: flex;
     justify-content: center;
     z-index: 1;
@@ -31,14 +34,16 @@
     height: auto !important;
     animation-direction: reverse !important;
 }
-.chracter-train{
+
+.chracter-train {
     display: flex;
     justify-content: flex-end;
     z-index: 1;
     position: relative !important;
     height: auto !important;
 }
-.slot-machine{
+
+.slot-machine {
     display: flex;
     justify-content: flex-start;
     z-index: 1;
@@ -46,29 +51,32 @@
     bottom: 0;
     height: auto !important;
 }
-.chracter-train .chracter-img{
+
+.chracter-train .chracter-img {
     position: relative;
     right: -150px;
 }
-.jackpot-text{
+
+.jackpot-text {
     position: relative;
     top: 158px;
 }
-.banner-info{
+
+.banner-info {
     position: absolute;
     top: 40%;
     left: 10%;
     z-index: 10;
 }
 
-.slides-wrapper{
+.slides-wrapper {
     width: 1728px;
     height: 700px;
     position: relative;
     margin: auto;
 }
 
-.container-block{
+.container-block {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -78,26 +86,31 @@
     background-size: cover;
     background-position: center;
 }
-.ng-star-inserted{
+
+.ng-star-inserted {
     animation-play-state: running;
 }
-.foreground{
+
+.foreground {
     right: -20px;
     left: -20px;
     animation: moveFront linear 15s infinite;
     position: absolute;
     height: 100%;
 }
-.train-foreground{
+
+.train-foreground {
     right: -20px;
     left: -20px;
     animation: moveFront linear 5s infinite;
     position: absolute;
     height: 100%;
 }
+
 .bg-contain {
     background-size: contain !important;
 }
+
 .image {
     position: absolute;
     inset: 0;
@@ -110,47 +123,55 @@
     opacity: 1;
     visibility: visible;
 }
-.coins{
+
+.coins {
     background-size: contain;
 }
+
 .coins-bag {
     -webkit-animation: shimmy 2s infinite;
     animation: shimmy 2s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
     width: 170px;
-  }
-.image-directive.animated{
-    transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
 }
 
-@keyframes moveFront{
+.image-directive.animated {
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+@keyframes moveFront {
     0% {
         transform: translateZ(0) rotate(.0001deg);
     }
+
     25% {
-        transform: translate3d(20px,0,0) rotate(.0001deg);
+        transform: translate3d(20px, 0, 0) rotate(.0001deg);
     }
+
     50% {
         transform: translateZ(0) rotate(.0001deg);
     }
+
     75% {
-        transform: translate3d(-20px,0,0) rotate(.0001deg);
+        transform: translate3d(-20px, 0, 0) rotate(.0001deg);
     }
+
     100% {
         transform: translateZ(0) rotate(.0001deg);
     }
 }
-  
+
 @-webkit-keyframes shimmy {
-0% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-}
-100% {
-    -webkit-transform: translate(20px, 50px);
-    transform: translate(20px, 50px);
-}
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(20px, 50px);
+        transform: translate(20px, 50px);
+    }
 }
 
 @keyframes shimmy {
@@ -158,6 +179,7 @@
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
     }
+
     100% {
         -webkit-transform: translate(0, 50px);
         transform: translate(0, 50px);
@@ -171,33 +193,281 @@
     top: -33px;
     color: red;
     z-index: 1;
-  }
-  .train-coins{
+}
+
+.train-coins {
     top: -200px;
     position: relative;
-  }
-  
-  @keyframes MoveUpDown {
-    0%, 100% {
-      top: -33px;
+}
+
+@keyframes MoveUpDown {
+
+    0%,
+    100% {
+        top: -33px;
     }
+
     50% {
-      top: -18px;
+        top: -18px;
     }
-  }
+}
+
+.rabit-cat-chracters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .chracters-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    
+        .coins-block {
+            position: absolute;
+            left: 0;
+        }
+    
+        .chracters-items {
+            z-index: 1;
+            position: relative;
+            display: flex;
+            .mid-chracter{
+                position: relative;
+                z-index: 1;
+            }
+    
+            img {
+                object-fit: contain;
+            }
+    
+            .bounce-coins {
+                position: absolute;
+                bottom: 71px;
+                left: 190px
+            }
+            .cat-chracter{
+                position: relative;
+                right: 145px;
+                top: 72px;
+            }
+            .rabbit-chracter{
+                position: relative;
+                left: 26px;
+                top: 104px;
+                z-index: 1;
+            }
+        }
+    
+        .text-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            .text-img{
+                z-index: 1;
+            }
+        
+        }
+    
+        .chracters-block {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+    .animation-container {
+        width: 200px;
+        height: 300px;
+    }
+
+    .front-coin{
+        position: absolute;
+    }
+
+    .container {
+        position: relative;
+        top: 30px;
+        height: 300px;
+        width: 190px;
+        transform: scale(0.5) translateX(0) scaleY(0.7);
+    }
+
+    .y-axis-container {
+        animation: bounce 2.6s infinite ease-in-out;
+    }
+
+    .shadow {
+        animation: scaling 2.6s infinite ease-in-out;
+    }
+
+    .coin {
+        position: absolute;
+        height: 300px;
+        left: 0;
+        width: 170px;
+        background: gold;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+
+    .side-coin {
+        position: absolute;
+        left: 85px;
+        height: 300px;
+        width: 35px;
+        background: #f5b642;
+    }
+
+    .side {
+        position: absolute;
+        background: #f5b642;
+        left: 22px;
+        width: 165px;
+        height: 304px;
+        top: -2px;
+    }
+
+    .shine {
+        width: 400px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.65);
+        transform: rotate(25deg);
+        animation: shine 5s infinite;
+    }
+
+    .flash {
+        z-index: 200;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: white;
+        top: 30px;
+        right: 20px;
+        animation: flash 7s infinite;
+    }
+
+    .dai {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #faf20a;
+        border: 1px solid white;
+        transform: rotate(53deg) skew(26deg);
+        top: 94px;
+        left: 35px;
+        overflow: hidden;
+    }
+
+    .cutout {
+        z-index: 20;
+        width: 150%;
+        height: 150%;
+        background: #ffee38;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 29px;
+        left: 29px;
+    }
+
+    .dai-shadow {
+        z-index: 20;
+        width: 150%;
+        height: 150%;
+        background: rgba(0, 0, 0, 0.07);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 29px;
+        right: 29px;
+    }
+
+    .inner-dai {
+        position: relative;
+        background: white;
+        height: 70px;
+        width: 70px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .inner-inner-dai {
+        position: relative;
+        background: #ffee38;
+        width: 20px;
+        height: 20px;
+        top: 25px;
+        left: 25px;
+    }
+
+    .shadow {
+        position: relative;
+        left: calc(50% - 60px);
+        top: -40px;
+        background: rgba(0, 0, 0, 0.2);
+        height: 30px;
+        width: 100px;
+        animation: scaling 2.6s infinite;
+        border-radius: 100%;
+    }
+
+    @keyframes bounce {
+        20% {
+            animation-timing-function: ease-out;
+            transform: translateY(-60px);
+        }
+
+        50% {
+            animation-timing-function: ease-out;
+            transform: translateY(-80px);
+        }
+    }
+
+    @keyframes scaling {
+        20% {
+            transform: scale(0.6);
+        }
+
+        50% {
+            transform: scale(0.5);
+        }
+    }
+
+    @keyframes flash {
+        0% {
+            transform: rotate(0deg) scale(0);
+        }
+
+        8% {
+            transform: rotate(0deg) scale(0);
+        }
+
+        10% {
+            transform: rotate(150deg) scale(1.8);
+        }
+
+        15% {
+            transform: rotate(45deg) scale(0);
+        }
+
+        100% {
+            transform: rotate(45deg) scale(0);
+        }
+    }
 
 
-  .chracters-wrapper{
-    position: relative;
-    z-index: 1;
-  }
-  .coins-block{
-    position: absolute;
-    left: 0;
-  }
+    @keyframes shine {
+        20% {
+            transform: rotate(25deg) translateY(400px);
+        }
 
-  .chracters-items{
-    z-index: 1;
-    position: relative;
-  }
-  
+        100% {
+            transform: rotate(25deg) translateY(400px);
+        }
+    }
+}
+
