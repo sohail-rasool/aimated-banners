@@ -1,0 +1,203 @@
+.slides {
+    width: 1300px;
+    height: 395px;
+    position: relative;
+    margin: auto;
+}
+
+.banner-jackpot{
+    width: 1728px;
+    height: 658px;
+    position: relative;
+    margin: auto;
+}
+.slide-car{
+    width: 1728px;
+    height: 700px;
+    position: relative;
+    margin: auto;
+}
+.jackpot-inner{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.chracter-jackpot{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    position: relative !important;
+    height: auto !important;
+    animation-direction: reverse !important;
+}
+.chracter-train{
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    position: relative !important;
+    height: auto !important;
+}
+.slot-machine{
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    height: auto !important;
+}
+.chracter-train .chracter-img{
+    position: relative;
+    right: -150px;
+}
+.jackpot-text{
+    position: relative;
+    top: 158px;
+}
+.banner-info{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 10;
+}
+
+.slides-wrapper{
+    width: 1728px;
+    height: 700px;
+    position: relative;
+    margin: auto;
+}
+
+.container-block{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: purple;
+    background-size: cover;
+    background-position: center;
+}
+.ng-star-inserted{
+    animation-play-state: running;
+}
+.foreground{
+    right: -20px;
+    left: -20px;
+    animation: moveFront linear 15s infinite;
+    position: absolute;
+    height: 100%;
+}
+.train-foreground{
+    right: -20px;
+    left: -20px;
+    animation: moveFront linear 5s infinite;
+    position: absolute;
+    height: 100%;
+}
+.bg-contain {
+    background-size: contain !important;
+}
+.image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    visibility: visible;
+}
+.coins{
+    background-size: contain;
+}
+.coins-bag {
+    -webkit-animation: shimmy 2s infinite;
+    animation: shimmy 2s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    width: 170px;
+  }
+.image-directive.animated{
+    transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+}
+
+@keyframes moveFront{
+    0% {
+        transform: translateZ(0) rotate(.0001deg);
+    }
+    25% {
+        transform: translate3d(20px,0,0) rotate(.0001deg);
+    }
+    50% {
+        transform: translateZ(0) rotate(.0001deg);
+    }
+    75% {
+        transform: translate3d(-20px,0,0) rotate(.0001deg);
+    }
+    100% {
+        transform: translateZ(0) rotate(.0001deg);
+    }
+}
+  
+@-webkit-keyframes shimmy {
+0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+100% {
+    -webkit-transform: translate(20px, 50px);
+    transform: translate(20px, 50px);
+}
+}
+
+@keyframes shimmy {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 50px);
+        transform: translate(0, 50px);
+    }
+}
+
+.object-updown {
+    animation: MoveUpDown 4s linear infinite;
+    position: absolute;
+    left: 0;
+    top: -33px;
+    color: red;
+    z-index: 1;
+  }
+  .train-coins{
+    top: -200px;
+    position: relative;
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      top: -33px;
+    }
+    50% {
+      top: -18px;
+    }
+  }
+
+
+  .chracters-wrapper{
+    position: relative;
+    z-index: 1;
+  }
+  .coins-block{
+    position: absolute;
+    left: 0;
+  }
+
+  .chracters-items{
+    z-index: 1;
+    position: relative;
+  }
+  
