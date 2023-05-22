@@ -225,12 +225,16 @@
   position: relative;
   right: 145px;
   top: 72px;
+  animation-direction: reverse !important;
+  height: auto !important;
 }
 .rabit-cat-chracters .content-wrapper .chracters-items .rabbit-chracter {
   position: relative;
   left: 26px;
   top: 104px;
   z-index: 1;
+  animation-direction: reverse !important;
+  height: auto !important;
 }
 .rabit-cat-chracters .content-wrapper .text-wrapper {
   flex: 1;
@@ -247,15 +251,19 @@
   display: flex;
   justify-content: center;
 }
-.rabit-cat-chracters .top-left-coin {
+.rabit-cat-chracters .small-coins {
   position: absolute;
-  top: -245px;
-  left: 0;
+  top: -205px;
+  transform: scale(0.5);
+}
+.rabit-cat-chracters .small-coins .y-axis-container {
+  animation: bounce 3.6s infinite ease-in-out !important;
+}
+.rabit-cat-chracters .top-left-coin {
+  left: 10%;
 }
 .rabit-cat-chracters .top-right-coin {
-  position: absolute;
-  top: -245px;
-  right: 0;
+  right: 10%;
 }
 .rabit-cat-chracters .animation-container {
   width: 200px;

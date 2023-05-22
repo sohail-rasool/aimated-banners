@@ -253,12 +253,16 @@
                 position: relative;
                 right: 145px;
                 top: 72px;
+                animation-direction: reverse !important;
+                height: auto !important;
             }
             .rabbit-chracter{
                 position: relative;
                 left: 26px;
                 top: 104px;
                 z-index: 1;
+                animation-direction: reverse !important;
+                height: auto !important;
             }
         }
     
@@ -280,15 +284,20 @@
         }
     }
 
-    .top-left-coin {
+    .small-coins{
         position: absolute;
-        top: -245px;
-        left: 0;
+        top: -205px;
+        transform: scale(0.5);
+        .y-axis-container{
+            animation: bounce 3.6s infinite ease-in-out !important;
+        }
+    }
+
+    .top-left-coin {
+        left: 10%;
     }
     .top-right-coin{
-        position: absolute;
-        top: -245px;
-        right: 0;
+        right: 10%;
     }
     
     .animation-container {
