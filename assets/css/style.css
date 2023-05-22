@@ -249,12 +249,12 @@
 }
 .rabit-cat-chracters .top-left-coin {
   position: absolute;
-  top: -300px;
+  top: -245px;
   left: 0;
 }
 .rabit-cat-chracters .top-right-coin {
   position: absolute;
-  top: -300px;
+  top: -245px;
   right: 0;
 }
 .rabit-cat-chracters .animation-container {
@@ -263,7 +263,7 @@
 }
 .rabit-cat-chracters .front-coin {
   position: absolute;
-  top: 100px;
+  top: 123px;
 }
 .rabit-cat-chracters .container-item {
   position: relative;
