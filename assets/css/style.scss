@@ -1,19 +1,20 @@
 .slides {
-    width: 1300px;
+    max-width: 1300px;
     height: 395px;
     position: relative;
     margin: auto;
 }
 
 .banner-jackpot {
-    width: 1728px;
+    max-width: 1728px;
     height: 658px;
+
     position: relative;
     margin: auto;
 }
 
 .slide-car {
-    width: 1728px;
+    max-width: 1728px;
     height: 700px;
     position: relative;
     margin: auto;
@@ -70,7 +71,7 @@
 }
 
 .slides-wrapper {
-    width: 1728px;
+    max-width: 1728px;
     height: 700px;
     position: relative;
     margin: auto;
@@ -271,8 +272,10 @@
             display: flex;
             justify-content: center;
             position: relative;
+            padding: 0 15px;
             .text-img{
                 z-index: 1;
+                max-width: 100%;
             }
         }
     
@@ -294,10 +297,10 @@
     }
 
     .top-left-coin {
-        left: 10%;
+        left: 20px;
     }
     .top-right-coin{
-        right: 10%;
+        right: 20px;
     }
     
     .animation-container {
